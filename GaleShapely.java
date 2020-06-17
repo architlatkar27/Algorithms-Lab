@@ -22,8 +22,11 @@ public class GaleShapely {
                 womenpref[i][j] = sc.nextInt();
             }
         }
+        long t1 = System.nanoTime();
         galeshapely(menpref,womenpref,n);
+        long t2 = System.nanoTime();
         System.out.println("End");
+        System.out.println("Execution Time: "+(t2-t1));
     }
 
     static boolean wPrefersm(int[] wpref,int n,int m,int m1){

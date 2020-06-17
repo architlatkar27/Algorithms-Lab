@@ -37,10 +37,14 @@ public class BucketSort {
         }
         System.out.println("Enter elements");
         for(int i=0;i<n;i++){
-            arr[i] = sc.nextFloat();
+            arr[i] = sc.nextFloat(); 
+        }
+        long t1 = System.nanoTime();
+        for(int i=0;i<n;i++){
             int bi = (int)(n*arr[i]);
             buckets[bi].addele(arr[i]);
         }
+        long t2 = System.nanoTime();
         System.out.println("Sorted Array");
         for(int i=0;i<n;i++){
             for(int j=0;j<buckets[i].elements.size()-1;j++){
@@ -49,5 +53,6 @@ public class BucketSort {
             System.out.print("/");
         }
         System.out.println("\nEnd");
+        System.out.println("Execution Time: "+(t2-t1));
     }
 }

@@ -38,8 +38,11 @@ public class DFS {
         }
         System.out.println("Input starting vertex");
         int s = sc.nextInt();
+        long t1 = System.nanoTime();
         algorithm(graph[s]);
+        long t2 = System.nanoTime();
         System.out.println("End");
+        System.out.println("Execution Time: "+(t2-t1));
     }
     static void algorithm(Vertex v){
         v.visited = true;

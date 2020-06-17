@@ -41,8 +41,11 @@ public class BFS {
         System.out.println("Input starting Point");
         int s = sc.nextInt();
         queue.add(graph[s]);
+        long t1 = System.nanoTime();
         algorithm();
+        long t2 = System.nanoTime();
         System.out.println("End");
+        System.out.println("Execution time: "+(t2-t1));
     }
     
     static void algorithm(){

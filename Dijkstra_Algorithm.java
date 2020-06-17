@@ -71,7 +71,9 @@ public class Dijkstra_Algorithm{
         int source;
         System.out.println("Input source node");
         source = sc.nextInt();
+        long t1 = System.nanoTime();
         algorithm(node,n,source);
+        long t2 = System.nanoTime();
         for(int i=0;i<n;i++){
             printPath(node[i]);
         }
@@ -87,10 +89,11 @@ public class Dijkstra_Algorithm{
             
         }
         System.out.println("End");
+        System.out.println("Execution Time: "+(t2-t1));
     }
     static void printPath(Node n){
         while(n!=null){
-            System.out.print(n.id+" ");
+            System.out.print(n.id+" -> ");
             n = n.prev;
         }
         System.out.print("\n");
